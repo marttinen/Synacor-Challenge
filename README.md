@@ -1,2 +1,3 @@
-# Synacor-Challenge
-Synacor Challenge
+# Synacor Challenge
+
+See https://challenge.synacor.com/
