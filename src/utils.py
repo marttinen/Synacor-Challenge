@@ -43,21 +43,21 @@ def load_vm(old_vm):
         vm.start()
 
 def dump_vm(vm):
-    with open('program.txt', 'w') as f:
+    with open('program.asm', 'w') as f:
         ptr = 0
         while vm.has_memory_address(ptr):
-            f.write(f'{ptr:5}:  ')
+            f.write(f'{ptr:05}:    ')
             op, ptr = vm.read_memory(ptr), ptr+1
 
             if op < len(opcodes):
                 values = [translate_value(vm.read_memory(ptr+i)) for i in range(0, opcodes[op][1])]
                 ptr += len(values)
-                f.write(f'{opcodes[op][0]:8}{" ".join(values)}\n')
+                f.write(f'{opcodes[op][0]:>4}    {" ".join(values)}\n')
             else:
-                f.write(f'mem     {op}\n')
+                f.write(f'        {translate_value(op)}\n')
 
 def translate_value(i):
     if i >= 32768:
         return f'R{i-32768}'
     else:
-        return str(i)
+        return f'{i:05}'
