@@ -1,10 +1,10 @@
 # Discovered Codes
 
-| Code | Description |
+| Codes | Discovers |
 | --- | --- |
-| jPBMoixVXuOg | about it! |
-| ??? | ??? |
-| ??? | ??? |
+| jPBMoixVXuOg | arch-spec |
+| eBaDCPoLQhgZ | implement VM basics and opcode 'out' |
+| gfKBAnaVUXKR | complete self-test |
 | ??? | ??? |
 | ??? | ??? |
 | ??? | ??? |
